@@ -52,7 +52,6 @@ agriDictionary[0] = "Humay: Tanum nga ginagamit para sa bugas";
         agriDictionary[23]= "Araro: gamit sa pag-andam sa yuta sa uma";
         agriDictionary[24]= "Irigasyon: sistema sa paghatag ug tubig sa tanom";
 } 
-
     // MEMBER: Jessa B.Torion
     // This method runs the program and allows user to search for a term
     public void runProgram() {
@@ -81,7 +80,9 @@ agriDictionary[0] = "Humay: Tanum nga ginagamit para sa bugas";
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(
+
+String[] args) {
         AgriBisayaDictionary obj = new AgriBisayaDictionary();
         obj.runProgram();
     }

@@ -65,6 +65,3 @@ agriDictionary[0] = "Humay: Tanum nga ginagamit para sa bugas";
                 total++;
             }
         }
-
-        return total;
-    }

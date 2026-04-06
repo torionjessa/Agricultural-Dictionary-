@@ -54,45 +54,17 @@ agriDictionary[0] = "Humay: Tanum nga ginagamit para sa bugas";
 } 
 
 // MEMBER: Jessa B.Torion
-    public void runProgram() {
-        Scanner sc = new Scanner(System.in);
-        loadData();
+    // This method counts how many times a term appears (multiple definitions)
+    public int countDefinitions(String term) {
+        int total = 0;
 
-        System.out.println("Bisaya Agriculture Dictionary");
-        System.out.println("Type 'exit' to quit.");
+        for (int i = 0; i < count; i++) {
+            String[] parts = agriDictionary[i].split(":");
 
-        while (true) {
-            System.out.print("Ibutang ang term: ");
-            String input = sc.nextLine().trim();
-
-            if (input.equalsIgnoreCase("exit")) {
-                System.out.println("Salamat sa paggamit sa dictionary! Bye!");
-                break;
-            }
-
-            boolean found = false;
-
-            for (int i = 0; i < count; i++) {
-                if (data[i] != null) {
-                    String[] parts = data[i].split(":", 2);
-                    if (parts[0].equalsIgnoreCase(input)) {
-                        System.out.println(parts[1].trim());
-                        found = true;
-                        break;
-                    }
-                }
-            }
-
-            if (!found) {
-                System.out.println("Wala pa na dria nabutang bay.,. Salamat ha!");
+            if (parts[0].equalsIgnoreCase(term)) {
+                total++;
             }
         }
 
-        sc.close();
+        return total;
     }
-
-    public static void main(String[] args) {
-        BisayaAgriDictionary obj = new BisayaAgriDictionary();
-        obj.runProgram();
-    }
-}
